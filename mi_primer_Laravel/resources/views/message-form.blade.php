@@ -60,12 +60,12 @@
                 if (response.ok) {
                     document.getElementById('message').value = ''; // Limpiar el campo de mensaje
                 } else {
-                    alert('Error al enviar el mensaje');
+                    document.getElementById('message').value = ''; // Limpiar el campo de mensaje
                 }
             })
             .catch(error => {
                 console.error('Error:', error);
-                alert('Error al enviar el mensaje');
+                document.getElementById('message').value = ''; // Limpiar el campo de mensaje
             });
         });
     </script>

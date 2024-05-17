@@ -16,7 +16,7 @@ class CommunicationController extends Controller
         $message = $request->input('message');
 
         // Envía el mensaje a Flask
-        $response = Http::post('http://127.0.0.1:5001/api/from_laravel', ['message' => $message]);
+        $response = Http::post('https://dh3c1ztc-5001.use2.devtunnels.ms/api/from_laravel', ['message' => $message]);
 
         // Procesa la respuesta si es necesario
 
@@ -30,7 +30,7 @@ class CommunicationController extends Controller
         $data = ['message' => 'Hola desde Laravel'];
 
         // Envía los datos al servidor Flask y obtén la respuesta
-        $response = Http::post('http://127.0.0.1:5001/api/from_laravel', $data);
+        $response = Http::post('https://dh3c1ztc-5001.use2.devtunnels.ms/api/from_laravel', $data);
 
         // Procesa la respuesta recibida del servidor Flask
         $responseData = $response->json();
